@@ -11,6 +11,7 @@
         "Nova": true
     },
     "env": {
+        "console": true,
         "browser": true,
         "node": true
     },
