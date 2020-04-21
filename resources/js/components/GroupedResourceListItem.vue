@@ -5,7 +5,7 @@
                     params: {
                         resourceName: resource.uriKey
                     }
-                }" class="text-white ml-8 no-underline dim">
+                }" class="text-white no-underline dim">
             {{ resource.label }}
         </router-link>
     </li>

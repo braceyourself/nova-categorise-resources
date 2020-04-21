@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-6">
+    <div class="mb-6 pl-8">
         <grouped-resource-collection :resources="resources"/>
     </div>
 </template>

@@ -1,24 +1,28 @@
 <template>
-    <div :class="`ml-${indent}`">
+    <div :class="`ml-${indent}`" class="flex flex-col flex-col-reverse">
 
-        <template v-for="(resource, key) in ungrouped">
-            <grouped-resource-list-item
-                :resource="resource"
-                :key="key"/>
+        <div style="border-left: solid 2px; padding-left: 6px;">
+            <template v-for="(resource, key) in ungrouped">
+                <grouped-resource-list-item
+                    :resource="resource"
+                    :key="key"/>
 
-        </template>
+            </template>
+        </div>
 
-        <template v-for="(group, key) in grouped">
-            <grouped-resource-collapsable
-                :key="key"
-                :header="key">
+        <div>
+            <template v-for="(group, key) in grouped">
+                <grouped-resource-collapsable
+                    :key="key"
+                    :header="key">
 
-                <grouped-resource-collection
-                    :resources="removeCurrentKey(group)"
-                    :indent="indent + 1"/>
+                    <grouped-resource-collection
+                        :resources="removeCurrentKey(group)"
+                        :indent="indent + 1"/>
 
-            </grouped-resource-collapsable>
-        </template>
+                </grouped-resource-collapsable>
+            </template>
+        </div>
 
 
     </div>

@@ -52,7 +52,7 @@ class NovaCategorise extends Nova
     private static function mergeFrcActinResources(Collection $resources)
     {
         foreach ($resources as $resource) {
-            if (str::contains($resource['name'], 'Nova\Frc')) {
+            if (str::contains($resource['name'], 'Nova\Frc\\')) {
                 $name = Str::of($resource['name'])->replace('Frc\\', 'FrcAction\\');
 
                 $resources->push(self::getGroupData("$name"));
