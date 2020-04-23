@@ -7,7 +7,7 @@
             <template v-if="expanded">&minus;</template>
             <template v-else>&plus;</template>
 <!---->
-            {{ header }}
+            {{ formatted_header }}
 
         </h4>
 
@@ -33,6 +33,13 @@
             toggle() {
                 this.expanded = !this.expanded
             }
+        },
+        computed:{
+            formatted_header() {
+                return _.startCase(this.header);
+            }
         }
+
+
     }
 </script>
