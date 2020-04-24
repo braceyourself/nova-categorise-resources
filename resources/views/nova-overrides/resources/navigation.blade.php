@@ -16,6 +16,6 @@ $grouped_resources = NovaCategorise::availableResourcesGrouped(request());
         <span class="sidebar-label">{{ __('Resources') }}</span>
     </h3>
 
-    <resource-groups :resource_json="{{json_encode($grouped_resources)}}"></resource-groups>
+    <resource-groups :data="{{json_encode($grouped_resources)}}"></resource-groups>
 
 @endif

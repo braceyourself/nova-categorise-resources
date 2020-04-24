@@ -29,17 +29,13 @@
 </template>
 
 <script>
-    import GroupedResourceCollapsable from "./GroupedResourceCollapsable";
-
     export default {
         name: "GroupedResourceCollection",
-        components: {
-            'grouped-resource-collapsable': GroupedResourceCollapsable
-        },
         props: {
             'resources': {
                 type: Object
-            }, 'indent': {
+            },
+            'indent': {
                 default: 0
             }
         },

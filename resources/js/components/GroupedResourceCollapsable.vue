@@ -6,7 +6,7 @@
 
             <template v-if="expanded">&minus;</template>
             <template v-else>&plus;</template>
-<!---->
+
             {{ formatted_header }}
 
         </h4>
@@ -17,8 +17,6 @@
 
 <script>
     export default {
-        created() {
-        },
         props: {
             header: {
                 type: String
@@ -39,7 +37,5 @@
                 return _.startCase(this.header);
             }
         }
-
-
     }
 </script>
