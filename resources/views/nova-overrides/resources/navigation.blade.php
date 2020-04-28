@@ -1,12 +1,4 @@
-<?php
-
-use AlexBowers\NovaCategoriseResources\NovaCategorise;
-
-$grouped_resources = NovaCategorise::availableResourcesGrouped(request());
-
-?>
-
-@if (count(\Laravel\Nova\Nova::availableResources(request())))
+@if (count($grouped_resources = \AlexBowers\NovaCategoriseResources\NovaCategorise::availableResourcesGrouped(request())))
     <h3 class="flex items-center font-normal text-white mb-6 text-base no-underline">
         <svg class="sidebar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path fill="var(--sidebar-icon)"
